@@ -1,0 +1,25 @@
+{
+  "name": "dynamodb-mary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MoviesCreateTable.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/myfair-web-scraping/dynamodb-mary.git"
+  },
+  "author": "mary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/myfair-web-scraping/dynamodb-mary/issues"
+  },
+  "homepage": "https://gitlab.com/myfair-web-scraping/dynamodb-mary#readme",
+  "dependencies": {
+    "aws-sdk": "^2.747.0"
+  },
+  "devDependencies": {
+    "should": "^13.2.3"
+  }
+}
