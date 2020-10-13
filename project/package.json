@@ -1,0 +1,24 @@
+{
+  "name": "crawl",
+  "version": "1.0.0",
+  "description": "this is a crawlling project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/myfair-web-scraping/crawling_project_mary.git"
+  },
+  "author": "mary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/myfair-web-scraping/crawling_project_mary/issues"
+  },
+  "homepage": "https://gitlab.com/myfair-web-scraping/crawling_project_mary#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "fs": "0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
