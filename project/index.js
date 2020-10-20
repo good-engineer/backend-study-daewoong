@@ -27,37 +27,43 @@ const doScrape = () => {
             console.log("start");
             const $ = cheerio.load(html);
             const title = $('h1').first().text();
-            // const audience = 
-            // const startDate =
-            // const endDate =
-            // const year =
-            // const month =
-            // const country =
-            // const hallName =
-            // const location =
-            // const description =
-            // const times =
-            // const industries =
-            // const cycle =
-            // const organizers =
+            const audience = $('span.label.label-success').text().split('5')[1];
+            const startDate = $('div.lead.mb-0').find('span').attr('content');
+            const endDate = $('div.lead.mb-0').find('span').next().attr('content');
+            const year = startDate.split('-')[0];
+            const month = startDate.split('-')[1];
+            const country = $('div.lead.mb-0').find('a').eq(1).text();
+            const hallName = $('div.col-md-6').find('h3').text().trim();
+            const location = $('div.col-md-6').find('p').first().text();
+            const description = $('p.desc.mng.word-break').text();
+            const startTime = $('table.table.noBorder.mng').find('br').text(); //todo
+            const endTime = 0; //todo
+            const status = $('small.block.text-danger').text();
+            const industry = $('td.hvrout2').find('a').text(); // should be loop!
+            const cycle = 0; //todo
+            const orgName = 0; //todo
+            const orgMail = 0; //todo
+
         }
+        var organizers = { orgName: orgName, orgMail: orgMail };
+        const industeries = { industry };
+        var times = { startTime: startTime, endTime: endTime, status: status };
         var obj = {
             title: title,
-            // audience : audience,
-            // startDate : tartDate,
-            // endDate : endDate,
-            // year : year,
-            // month : month,
-            // country : country,
-            // hallName : hallName,
-            // location : location,
-            // description : description,
-            // times : times,
-            // industries : industries,
-            // cycle : cycle,
-            // organizers : organizers,
+            audience: audience,
+            startDate: tartDate,
+            endDate: endDate,
+            year: year,
+            month: month,
+            country: country,
+            hallName: hallName,
+            location: location,
+            description: description,
+            times: times,
+            industries: industries,
+            cycle: cycle,
+            organizers: organizers
         };
-        console.log(title);
         var objJSON = JSON.stringify(obj);
         return (objJSON);
     });
